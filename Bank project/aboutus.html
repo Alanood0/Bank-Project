@@ -1,0 +1,117 @@
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login page</title>
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="aboutus.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+  <!-- AOS  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <header>
+    <div> <img id="logo"src="https://m.eyeofriyadh.com/directory/images/2022/12/3527269eced50.jpg" alt=""> </div>
+  </header>
+  
+</head>
+<body onload="loader()">
+
+<!-- loader for splash screen -->
+<div id="loading"></div>
+
+  <!-- navbar starts here  -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./index.html">Sharjah islamic Bank</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login2.html">login</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/signup.html">Sign up</a>
+
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+  <!-- navbar ends here  -->
+
+    <body> 
+      <section id="section1">
+        <div>
+            <h1>About sharajah islamic Bank</h1>
+      
+            <p class="text">
+        <br>
+        IN SIB, We deliver long-term value and enhance the financial health to all our customers with a range of specialized products and services.
+        Established by Emiri decree by His Highness Dr. Sheikh Sultan Bin Mohamed Al Qassimi in 1975, Sharjah Islamic Bank (SIB) transitioned from commercial to Islamic banking in 2002. Today, we are a financial institution providing a broad variety of Sharia'a-compliant, retail, corporate and investment products and services to our valued customers via an extensive UAE network.
+          </p>
+        </div>
+      </section>
+    <section id="section2"> 
+      <div>
+          <img src="#" alt="">
+          <h3>Mission</h3>
+          <br>
+          <p> We are committed to the development of our community by serving customers with socially responsible solutions, and providing world-class employment opportunities based on knowledge, teamwork, respect and leadership-while creating sustainable value for our shareholders.</p>
+      </div>
+
+      <div>
+          <img src="#" alt="">
+          <h3>Vision</h3>
+          <br>
+          <p>To be the bank of choice for creative customer solution, based on excellence and islamic principles of partnership, trust and equality for all.</p>
+      </div>
+
+      <div>
+        <img src="#" alt="">
+        <h3>Values</h3>
+        <br>
+        <p>As everyone's bank, we believe in people, first and foremost. Our bank promotes a harmonious environment of fairness, trust and respect. We offer our customers an innovative banking experience via customized solutions, and empower our staff with abdunat opportunity for career development.</p>
+      </div>
+
+</section>
+</body>
+
+
+
+ <!-- spalsh screen js -->
+ <script>
+  var preloader = document.getElementById("loading");
+  function loader(){
+    preloader.style.display = 'none';
+  }
+</script>
+
+<script src="assets/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+
+<!-- aos data  -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,
+  });
+</script>
+
+</html>
