@@ -63,12 +63,12 @@ width: 100%;
 }
 
 .text {
-    font-size: 15px;
+    font-size: 20px;
     color: rgb(42, 77, 132);
     line-height: 30px;
     text-align: justify;
     margin-bottom: 40px;
-    padding: 50px;
+    padding: 70px;
 }
 
 h1 {
@@ -87,5 +87,52 @@ h1 {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-
 }
+
+/* footer */
+.fa:hover {
+    color: red;
+     transform:scale(1.3);
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa {
+    padding: 15px;
+    font-size: 12px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  .footer{
+    background-color: #e4eff2;
+    padding: 5px;
+  
+  }
+  /* footer css ends here  */

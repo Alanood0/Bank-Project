@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up page</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <!-- AOS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <header>
+      <div> <img id="logo"src="https://m.eyeofriyadh.com/directory/images/2022/12/3527269eced50.jpg" alt=""> </div>
+    </header>
+</head>
+
+<body onload="loader()">
+
+  <!-- loader for splash screen -->
+  <div id="loading"></div>
+
+    <!-- navbar starts here  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="./index.html">Sharjah islamic Bank</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+    <!-- navbar ends here  -->
+
+
+    <body>
+      <div class="container2">
+        <h1 class="main-header">Account Reistration Form </h1>
+        <p> The information given in this section is considered as the information of the primary account owner information. </p>
+        <hr>
+        <form id="app-form" action="">
+        <fieldset class="sub-container" id="basic-details">
+          <h2 class="sub-heading"> Account Owner Details </h2>
+          <hr>
+            <label for="dropdown" class="standard-label">
+              Title<span class="required">*</span>
+              <br>
+              <select  id="dropdown" class="standard-select" required>
+                <option value="select" disabled selected>Select Title</option>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Ms">Ms</option>
+              </select>
+            </label>
+            <label for="firstname" class="standard-label">
+              First Name<span class="required">*</span>
+              <input class="standard-input" name="firstname" id="firstname" type="text" placeholder="First name..." required>
+            </label>
+            <label for="middlenames" class="standard-label">
+              Middle Names (If Applicable)
+              <input class="standard-input" name="middlename" id="middlename" type="text" placeholder="Middle names...">
+            </label>
+            <label for="lastname" class="standard-label">
+              Last Name<span class="required">*</span>
+              <input class="standard-input" name="lastname" id="lastname" type="text" placeholder="Last name..." required>
+            </label>
+            <label for="phone-number" class="standard-label">
+              Phone Number<span class="required">*</span>
+              <input class="standard-input" type="tel" id="phone" name="phone" pattern='^\+?\d{10,12}' placeholder="Example: 0500000000" required>
+            </label>
+            <label for="email-address" class="standard-label">
+              Email<span class="required">*</span>
+              <input class="standard-input" id="email-address" type="email" placeholder="Your email address..." required>
+            </label>
+            <label for="pass-address" class="standard-label">
+              Password<span class="required">*</span>
+              <input class="standard-input" id="pass-address" type="password" placeholder="Your password..." required minlength="7">
+            </label>
+            <label for="DOB" class="standard-label">
+              Date of Birth<span class="required">*</span>
+              <input class="standard-input" type="date" name="DOB" id="DOB" required>
+            </label>
+            <label for="accounttype" class="standard-label">
+              What type of account are you applying for?<span class="required">*</span>
+              <br>
+              <select  id="account-select" class="standard-select" required>
+                <option value="select" disabled selected>Choose Account</option>
+                <option value="basic-current">Basic Current Account</option>
+                <option value="premium-current">Premium Current Account</option>
+                <option value="instant-saver">Access Savings Account</option>
+                <option value="instant-saver">joint Account</option>
+              </select>
+      <br>
+              <label for="joint" class="standard-label">
+                <br>
+              Do you want to add joint owner to the bank account?
+              <form>
+                <br>
+                <br>
+                <input type = "radio" name = "subject" value = "Yes"> Yes
+                <input type = "radio" name = "subject" value = "No"> No
+             </form>
+             </label>
+                           
+             <label for="terms" class="standard-label">
+              <br>
+              <p style="text-align: center";> By ticking this form, I acknowledge that the information I've given in this form is accurate and I agree all the terms and conditions. </p>
+            
+            <form class="terms">
+             <input type = "checkbox" name = "terms" value = "on"> I agree to terms & conditions.
+             </form>
+      
+            </label>
+            <label for="comment" class="standard-label">
+             Any addional comments: <address> </address>
+         <textarea></textarea>
+            </label>
+
+
+            <label>
+              <div class="mb-3">
+                <Button type="submit" name="submit" class = "standard-label1" > Sign Up </Button>
+            </div>
+            </label>
+            <button type="button" id="show-address">Continue</button>
+          </fieldset>
+          
+          <fieldset class="sub-container" id="address-history">
+            <h2 class="sub-heading">Address History</h2>
+            <hr>
+            <h3 class="small-heading">Are you currently a UK resident?</h3>
+            <label for="yes" class="radio-label">
+              <input class="radio-input" name="UK-res" value="yes" id="yes" type="radio">Yes</input>
+            </label>
+            <label for="no" class="radio-label">
+              <input class="radio-input" name="UK-res" value="no" id="no" type="radio">No</input>
+            </label>
+            <p id="non-uk">We're really sorry. We currently only offer banking services to UK residents.</p>
+            <div id="current-address">
+              <h3 class="small-heading">Current Address</h3>
+              <label for="line1" class="standard-label">
+                Address line 1<span class="required">*</span>
+                <input class="standard-input" type="text" required>
+              </label>
+              <label for="line2" class="standard-label">
+                Address line 2
+                <input class="standard-input" type="text">
+              </label>
+              <label for="town-city" class="standard-label">
+                Town/City<span class="required">*</span>
+                <input class="standard-input" type="text" required>
+              </label>
+              <label for="county" class="standard-label">
+                County
+                <input class="standard-input" type="text">
+              </label>
+              <label for="postcode" class="standard-label">
+                Post Code<span class="required">*</span>
+                <input class="standard-input" type="text" maxlength="8" required>
+              </label>
+              <h3 class="small-heading">Have you lived at any other address within the last 5 years?</h3>
+              <label for="yes-prev" class="radio-label">
+                <input class="radio-input" name="UK-res" value="yes" id="yes-prev" type="radio">Yes</input>
+              </label>
+              <label for="no-prev" class="radio-label">
+                <input class="radio-input" name="UK-res" value="no" id="no-prev" type="radio">No</input>
+              </label>
+            </div>
+            <div id="previous-address">
+              <h3 class="small-heading">Previous Address</h3>
+              <label for="line1" class="standard-label">
+                Address line 1<span class="required">*</span>
+                <input class="standard-input" type="text">
+              </label>
+              <label for="line2" class="standard-label">
+                Address line 2
+                <input class="standard-input" type="text">
+              </label>
+              <label for="town-city" class="standard-label">
+                Town/City<span class="required">*</span>
+                <input class="standard-input" type="text">
+              </label>
+              <label for="county" class="standard-label">
+                County
+                <input class="standard-input" type="text">
+              </label>
+              <label for="postcode" class="standard-label">
+                Post Code<span class="required">*</span>
+                <input class="standard-input" type="text" maxlength="8">
+              </label>
+            </div>
+            <button type="button" id="get-consent">Continue</button>
+          </fieldset>
+    
+          <fieldset class="sub-container" id="your-consent">
+            <h2 class="sub-heading">Your Consent</h2>
+            <hr>
+            <label class="standard-label" id="credit-search" for="credit-search">
+              Tick the box below to allow the bank to use the details you have provided to conduct a credit search if necessary.
+              <br>
+            <input type="checkbox" id="credit-click" name="credit-search"><br>
+            </label>
+            <label class="standard-label" for="info-request" id="info-request">
+              Tick the box below to allow the bank to contact you via email if further information is needed to progress your application.
+              <br>
+              <input type="checkbox" id="info-click" name="info-request"><br>
+            </label>
+            <input id="submit-app" type="submit" name="submit" value="Submit Application" onclick="logValues()">
+          </fieldset>
+        </form>
+      </div>
+    </body>
+    </html>
+    <body>
+  <p id="tempData"></p>
+  
+  <script src="signup.js"></script>
+<section>
+    <div class="footer" style="margin-top: 25px;">
+      <div class="container" id="Foodie">
+    
+    <h1 style="color:rgb(27, 13, 150);font-family: Lucida Handwriting; margin-top: 55px;font-size: 30px;font-weight: 500;  box-shadow:2px 6px 18px rgba(66,57,238,0.3);
+    " ><b>SIB Bank</b></h1>
+    </div>
+    
+     <div class="container">
+       <div class="row">
+         <div class="col-sm-6">
+           <p style="color: rgb(6, 0, 0);font-size: 17px;margin-top: 30px; font-style: normal;">Sharjah Bank is the place<br>
+               where customers feel the sense of safety<br>
+               for their property. And also,In the bank,<br>
+               where customers can send the money<br>
+               in easy way.. Transaction of money is main<br>
+               part where customer takes shelter of the bank.<br>
+    
+           </p>        
+         </div>
+         <div class="col-sm-6">
+    
+            <h3 style="color: white;color: rgb(27, 13, 150)">Follow US!</h3><br>
+            <a href="https://www.facebook.com/Shjislamicbank" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/shjislamicbank" class="fa fa-twitter"></a>
+    <a href="https://www.linkedin.com/company/29366?trk=vsrp_companies_res_name&trkInfo=VSRPsearchId%3A2262550761376294573267%2CVSRPtargetId%3A29366%2CVSRPcmpt%3Aprimary" class="fa fa-linkedin"></a>
+    <a href="https://www.instagram.com/shjislamicbank/" class="fa fa-instagram"></a>
+    
+         </div>
+         
+       </div>
+    
+       
+     </div>
+     
+    </div>
+        <!-- footer ends here -->
+</section>
+
+    <!-- spalsh screen js -->
+ <script>
+  var preloader = document.getElementById("loading");
+  function loader(){
+    preloader.style.display = 'none';
+  }
+</script>
+<script> 
+function passid_validation(passid,mx,my)
+{
+var passid_len = passid.value.length;
+if (passid_len == 0 ||passid_len >= my || passid_len < mx)
+{
+alert("Password should not be empty / length be between "+mx+" to "+my);
+passid.focus();
+return false;
+}
+return true;
+}
+<!-- 
+<script>
+  funcation vaildtepassword(){
+    let pass-address = document.form["loginform"]['userpassword'].value;
+    let lowerCaseCheck = /[a-z]/g;
+    let UpperCaseCheck = /[A-Z]/g;
+    let NumberCheck = /[0-9]/g;
+    if(userpassword.match(lowerCaseCheck)){
+      else{
+        document.
+      }
+    }
+
+  }
+  -->
+
+</script>
+<script src="assets/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+
+<!-- aos data  -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,
+  });
+</script>
+
+</html>
+
