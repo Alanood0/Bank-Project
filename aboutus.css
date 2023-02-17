@@ -41,8 +41,11 @@ header {
 /* navbar css ends here  */
 
 #section2{
-display: flex;
+display: block;
 width: 100%;
+background: #fff;
+padding: 2.1875em 1.5625em;
+position: relative;
 }
 
 
@@ -135,4 +138,57 @@ h1 {
     padding: 5px;
   
   }
+
+  .mission-icon {
+    width: 3.3125em;
+    height: 3.3125em;
+    display: block;
+    margin: 0 0 0.9375em;
+    align-items: center;
+    margin-left: auto;
+  margin-right: auto;
+  }
   /* footer css ends here  */
+
+  .footer-basic {
+    padding:40px 0;
+   
+    color:#4b4c4d;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
+  
