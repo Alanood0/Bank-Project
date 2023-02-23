@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <header>
       <div> <img id="logo"src="https://m.eyeofriyadh.com/directory/images/2022/12/3527269eced50.jpg" alt=""> </div>
-    </header>
+    
 
 <body onload="loader()">
 
@@ -33,7 +33,6 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -50,6 +49,7 @@
           </ul>
         </div>
     </nav>
+  </header>
  
     <div class="container-fluid hero-content">
       <div class="row align-items-center">
@@ -83,17 +83,20 @@
       <section class="container2"> 
       <div class="row justify-content-center">
           <div class="col-xl-6">
-              <form class="form" method="post" action="">
-                <h3 id="start" > Start banking by signing in: </h3>
+              <form class="form" method="post" action="" name="loginForm">
+                <h3 id="start"> Start banking by signing in: </h3>
                 <br>
                   <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Username</label>
                       <input type="text" name="username" class="form-control" placeholder="Enter Your UserName" required>
+
+  
                   </div>
                   <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" placeholder="Enter Your Password" required>
+                      <input type="password" name="user_password" class="form-control" placeholder="Enter Your Password" required onkeyup="validatePassword()" minlength="8" maxlength="20"> 
                   </div>
+                   <div class="error" id="passwordErr"> </div>
                   <div class="mb-3">
                       <Button type="submit" name="submit" class = "btn btn-primary">Secure Login</Button>
                   </div>
@@ -125,7 +128,7 @@
           <ul class="list-inline">
             <li class="list-inline-item"><a href="index.html">Home</a></li>
             <li class="list-inline-item"><a href="aboutus.html">About Us</a></li>
-            <li class="list-inline-item"><a href="dashboard.css">Dashboard</a></li>
+            <li class="list-inline-item"><a href="signup.html">Sign Up</a></li>
             <li class="list-inline-item"><a href="https://www.sib.ae/en/privacy-policy">Privacy Policy</a></li>
           </ul>
           <p class="copyright">SIB © 2002</p>
@@ -135,7 +138,7 @@
    <div class="row">
      <div class="col-sm-6">
       <div class="container" id="Foodie">
-
+  
         <h1 style="color:rgb(27, 13, 150);font-family: Lucida Handwriting; text-align: center; margin-top: 55px;font-size: 30px;font-weight: 500;  box-shadow:2px 6px 18px rgba(66,57,238,0.3);
         " ><b>SIB Bank</b></h1>
         </div>
@@ -174,8 +177,22 @@
         preloader.style.display = 'none';
       }
     </script>
+<script>
 
-<script src="assets/js/script.js"></script>
+  function validatePassword(){
+      let userPassword = document.forms["loginForm"]["user_password"].value;
+
+      let lowerCaseCheck =/^(\S)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])[a-zA-Z0-9~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]{10,16}$/;
+    
+      if(userPassword.match(lowerCaseCheck)){
+          document.getElementById("passwordErr").innerText="";
+      } else {
+          document.getElementById("passwordErr").innerText="password must contain lowercase, uppercase & symbols";
+      }
+      
+  }
+  </script>
+  
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
 <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>

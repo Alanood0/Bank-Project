@@ -59,12 +59,12 @@
         <h1 class="main-header">Account Reistration Form </h1>
         <p> The information given in this section is considered as the information of the primary account owner information. </p>
         <hr>
-        <form id="app-form" action="">
+        <form id="app-form" action="" name="loginForm">
         <fieldset class="sub-container" id="basic-details">
           <h2 class="sub-heading"> Account Owner Details </h2>
           <hr>
             <label for="dropdown" class="standard-label">
-              Title<span class="required">*</span>
+              Title<span class="required"></span>
               <br>
               <select  id="dropdown" class="standard-select" required>
                 <option value="select" disabled selected>Select Title</option>
@@ -88,7 +88,7 @@
             </label>
             <label for="phone-number" class="standard-label">
               Phone Number<span class="required">*</span>
-              <input class="standard-input" type="tel" id="phone" name="phone" pattern='^\+?\d{10,12}' placeholder="Example: 0500000000" required>
+              <input class="standard-input" type="tel" id="phone" name="phone" pattern='^\+?\d{10,12}' placeholder="Example: 0500000000" reruired minlength="9">
             </label>
             <label for="email-address" class="standard-label">
               Email<span class="required">*</span>
@@ -96,14 +96,18 @@
             </label>
             <label for="pass-address" class="standard-label">
               Password<span class="required">*</span>
-              <input class="standard-input" id="pass-address" type="password" placeholder="Your password..." required minlength="7">
+              <input name="user_password" class="standard-input" id="pass-address" type="password" placeholder="Your password..." required onkeyup="validatePassword()" minlength="8" maxlength="20">
+              <br> <br>
+              <div class="error" id="passwordErr">
+
+              </div>
             </label>
             <label for="DOB" class="standard-label">
               Date of Birth<span class="required">*</span>
               <input class="standard-input" type="date" name="DOB" id="DOB" required>
             </label>
             <label for="accounttype" class="standard-label">
-              What type of account are you applying for?<span class="required">*</span>
+              What type of account are you applying for?<span class="required"></span>
               <br>
               <select  id="account-select" class="standard-select" required>
                 <option value="select" disabled selected>Choose Account</option>
@@ -129,7 +133,7 @@
               <p style="text-align: center";> By ticking this form, I acknowledge that the information I've given in this form is accurate and I agree all the terms and conditions. </p>
             
             <form class="terms">
-             <input type = "checkbox" name = "terms" value = "on"> I agree to terms & conditions.
+             <input type = "checkbox" name = "terms" value = "on" required> I agree to terms & conditions.
              </form>
       
             </label>
@@ -141,7 +145,7 @@
 
             <label>
               <div class="mb-3">
-                <Button type="submit" name="submit" class = "standard-label1" > Sign Up </Button>
+                <Button type="submit" name="submit" class = "standard-label1" href="dashboard.html"> Sign Up </Button>
             </div>
             </label>
             <button type="button" id="show-address">Continue</button>
@@ -157,7 +161,7 @@
             <label for="no" class="radio-label">
               <input class="radio-input" name="UK-res" value="no" id="no" type="radio">No</input>
             </label>
-            <p id="non-uk">We're really sorry. We currently only offer banking services to UK residents.</p>
+            <p id="non-uk">We're really sorry. We currently only offer banking services to uae residents.</p>
             <div id="current-address">
               <h3 class="small-heading">Current Address</h3>
               <label for="line1" class="standard-label">
@@ -246,7 +250,7 @@
                 <ul class="list-inline">
                     <li class="list-inline-item"><a href="index.html">Home</a></li>
                     <li class="list-inline-item"><a href="aboutus.html">About Us</a></li>
-                    <li class="list-inline-item"><a href="dashboard.css">Dashboard</a></li>
+                    <li class="list-inline-item"><a href="signup.html">Sign Up</a></li>
                     <li class="list-inline-item"><a href="https://www.sib.ae/en/privacy-policy">Privacy Policy</a></li>
                 </ul>
                 <p class="copyright">SIB © 2002</p>
@@ -307,23 +311,25 @@ return false;
 }
 return true;
 }
-<!-- 
-<script>
-  funcation vaildtepassword(){
-    let pass-address = document.form["loginform"]['userpassword'].value;
-    let lowerCaseCheck = /[a-z]/g;
-    let UpperCaseCheck = /[A-Z]/g;
-    let NumberCheck = /[0-9]/g;
-    if(userpassword.match(lowerCaseCheck)){
-      else{
-        document.
-      }
-    }
-
-  }
-  -->
-
 </script>
+<script>
+
+  function validatePassword(){
+      let userPassword = document.forms["loginForm"]["user_password"].value;
+
+      let lowerCaseCheck =/^(\S)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])[a-zA-Z0-9~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]{10,16}$/;
+    
+      if(userPassword.match(lowerCaseCheck)){
+          document.getElementById("passwordErr").innerText="";
+      } else {
+          document.getElementById("passwordErr").innerText="password must contain lowercase, uppercase & symbols";
+      }
+      
+  }
+  </script>
+
+
+
 <script src="assets/js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>

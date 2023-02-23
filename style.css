@@ -88,10 +88,12 @@ header {
 .get-started{
     border-radius: 0.5rem;
     padding: 1rem 2rem;
-    font-size: 162%;
+    font-size: 150%;
     background-color: #fff;
     color: #022061!important;
     transition: 0.3s;
+    font-style: italic;
+    font-family: Poppins,sans-serif;
 }
 
 .get-started:hover{
@@ -193,9 +195,11 @@ h1 {
   margin-inline-end: 0px;
   font-weight: bold;
   text-align: center;
+  font-family: "Open Sans", cambria;
+  
 }
 * {
-  font-family: "Open Sans", cambria;
+  font-family: Poppins,sans-serif;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -207,6 +211,7 @@ width: 100%;
 display:flex;
 justify-content: right;
 
+
 }
 .form{
   max-width: 430;
@@ -214,6 +219,7 @@ justify-content: right;
   padding: 30px;
   border-radius: 6px;
   background-color: #e4eff2;
+
 }
 
 #start{
@@ -223,6 +229,7 @@ font-size: 28px;
 font-weight: 600;
 color: black;
 justify-content: center;
+  font-family: "Open Sans", cambria;
 
 }
 
@@ -277,6 +284,9 @@ justify-content: center;
   margin-bottom:0;
 }
 
+.error{
+color: red;
+}
 
 
   
